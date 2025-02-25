@@ -37,7 +37,7 @@ CREATE TABLE dino_type(
 CREATE TABLE location(
     id SERIAL PRIMARY KEY,
     name TEXT DEFAULT 'какая-то локация',
-    biom_id INTEGER REFERENCES biom(id) ON DELETE CASCADE,
+    biom_id INTEGER NOT NULL REFERENCES biom(id) ON DELETE CASCADE,
     parent_location_id INTEGER REFERENCES location(id) ON DELETE CASCADE
 );
 
@@ -47,7 +47,7 @@ CREATE TABLE dinosaur(
     gender GENDER NOT NULL,
     age integer DEFAULT 0 CONSTRAINT positive CHECK (age >= 0),
     dino_type_id INTEGER REFERENCES dino_type(id) ON DELETE CASCADE,
-    current_swarm_id INTEGER REFERENCES swarm(id) ON DELETE CASCADE,
+    current_swarm_id INTEGER REFERENCES swarm(id) ON DELETE SET NULL,
     parent_dino_id INTEGER REFERENCES dinosaur(id) ON DELETE SET NULL,
     current_location_id INTEGER REFERENCES location(id) ON DELETE SET NULL
 );

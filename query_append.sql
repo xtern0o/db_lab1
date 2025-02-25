@@ -1,5 +1,5 @@
 INSERT INTO sound (name, volume) VALUES 
-    ('гогот', 85),
+    ('гогот', 70),
     ('крик', 90);
 
 INSERT INTO diet (name) VALUES 
@@ -17,7 +17,8 @@ INSERT INTO action (name) VALUES
     ('плавать'), 
     ('кричать'), 
     ('гоготать'),
-    ('услышать');
+    ('услышать'),
+    ('изгибаться');
 
 INSERT INTO biom (name) VALUES 
     ('лес'), 
