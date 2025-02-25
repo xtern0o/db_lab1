@@ -31,10 +31,10 @@ INSERT INTO dino_type (name, habitat_biom_id) VALUES
     ('утконосый', 2), 
     ('страшный', 1);
 
-INSERT INTO location (name, parent_location_id) VALUES 
-    ('тайга', NULL), 
-    ('пляж', 1), 
-    ('лагуна с утнконосами', 2);
+INSERT INTO location (name, parent_location_id, biom_id) VALUES 
+    ('тайга', NULL, 1), 
+    ('крутой пляж', 1, 5), 
+    ('лагуна с утнконосами', 2, 2);
 
 INSERT INTO dinosaur (name, gender, age, dino_type_id, current_swarm_id, parent_dino_id, current_location_id) VALUES 
     (DEFAULT, 'f', 30, 2, 1, NULL, 1),

@@ -71,7 +71,3 @@ CREATE TABLE dinotype_to_diet(
     dinotype_id INTEGER REFERENCES dino_type(id),
     diet_id INTEGER REFERENCES diet(id)
 );
-
-
-
-COMMIT;
