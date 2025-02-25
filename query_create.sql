@@ -45,7 +45,7 @@ CREATE TABLE dinosaur(
     id SERIAL PRIMARY KEY,
     name TEXT DEFAULT 'безымянный динозавр',
     gender GENDER NOT NULL,
-    age integer DEFAULT 0 CHECK CONSTRAINT positive CHECK (age >= 0),
+    age integer DEFAULT 0 CONSTRAINT positive CHECK (age >= 0),
     dino_type_id INTEGER REFERENCES dino_type(id) ON DELETE CASCADE,
     current_swarm_id INTEGER REFERENCES swarm(id) ON DELETE CASCADE,
     parent_dino_id INTEGER REFERENCES dinosaur(id) ON DELETE SET NULL,
