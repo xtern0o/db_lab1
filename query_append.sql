@@ -10,12 +10,14 @@ INSERT INTO diet (name) VALUES
 
 INSERT INTO swarm (name) VALUES 
     ('крутая стая'), 
-    ('пустая стая');
+    ('пустая стая'),
+    ('Grant party');
 
 INSERT INTO action (name) VALUES 
     ('плавать'), 
     ('кричать'), 
-    ('гоготать');
+    ('гоготать'),
+    ('услышать');
 
 INSERT INTO biom (name) VALUES 
     ('лес'), 
@@ -36,13 +38,15 @@ INSERT INTO location (name, parent_location_id) VALUES
 INSERT INTO dinosaur (name, gender, age, dino_type_id, current_swarm_id, parent_dino_id, current_location_id) VALUES 
     (DEFAULT, 'f', 30, 2, 1, NULL, 1),
     ('максим', 'm', 19, 1, 1, 1, 3),
-    ('еще утконос', 'm', 4430, 2, 1, 2, 2);
+    ('еще утконос', 'm', 4430, 2, 1, 2, 2),
+    ('Грант', 'm', 20, 1, 2, 3, 2, 3);
 
 INSERT INTO dino_to_action (dino_id, action_id) VALUES
     (1, 1),
     (1, 3),
     (2, 3),
-    (3, 2);
+    (3, 2),
+    (4, 4);
 
 INSERT INTO dinotype_to_sound (dinotype_id, sound_id) VALUES
     (1, 1),
@@ -52,4 +56,4 @@ INSERT INTO dinotype_to_diet (dinotype_id, diet_id) VALUES
     (1, 1),
     (1, 4),
     (2, 2),
-    (2, 3);
+    (2, 3),
