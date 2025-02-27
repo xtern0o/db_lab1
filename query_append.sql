@@ -29,7 +29,8 @@ INSERT INTO biom (name) VALUES
 
 INSERT INTO dino_type (name, habitat_biom_id) VALUES 
     ('утконосый', 2), 
-    ('страшный', 1);
+    ('страшный', 1),
+    ('человек', 1);
 
 INSERT INTO location (name, parent_location_id, biom_id) VALUES 
     ('тайга', NULL, 1), 
@@ -40,7 +41,7 @@ INSERT INTO dinosaur (name, gender, age, dino_type_id, current_swarm_id, parent_
     (DEFAULT, 'f', 30, 2, 1, NULL, 1),
     ('максим', 'm', 19, 1, 1, 1, 3),
     ('еще утконос', 'm', 4430, 2, 1, 2, 2),
-    ('Грант', 'm', 20, 1, 2, 3, 2);
+    ('Грант', 'm', 20, 3, 2, 3, 2);
 
 INSERT INTO dino_to_action (dino_id, action_id) VALUES
     (1, 1),
